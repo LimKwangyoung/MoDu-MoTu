@@ -1,0 +1,40 @@
+.userInfoContainer {
+  display: flex;
+  margin: 15px auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  min-width: 170px;
+  font-size: 15px;
+  /* border: 1px solid red; */
+}
+
+.userName {
+  color: #ccc;
+  margin-left: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+  /* border: 1px solid blue; */
+}
+
+.medal {
+  font-size: 23px;
+}
+
+.isProfitPlus {
+  color: #cf5055;
+  font-weight: 400;
+}
+
+.isProfitMinus {
+  color: #4881ff;
+  font-weight: 400;
+}

@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  width: 100%;
+  margin-left: 20px;
+  padding: 15px 0px;
+  gap: 50px;
+  /* border: 1px solid red; */
+}
+
+.graph{
+  width: 525px;
+  /* border: 1px solid red; */
+}
+
+.graphTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 10px 10px;
+  position: relative;
+  z-index: 1;
+  color: rgb(243, 235, 255);
+}
+
+.graphTitle::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: #8000ff; /* 보라색 */
+  border-radius: 50%;
+  position: absolute;
+  left: -7px; /* 위치를 적절히 조절합니다 */
+  top: -3px; /* 텍스트와 맞추기 위해 위치 조정 */
+  z-index: -1;
+}
+
+.graphContent {
+  margin-top: 10px;
+}

@@ -1,0 +1,74 @@
+/* OrderButton.module.css */
+
+.bottomContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  border-top: 1px solid #3D3D47;
+  padding-top: 10px;
+}
+
+.limitContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.totalContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.limitContainer p,
+.totalContainer p {
+  color: #ccc;
+}
+
+
+.buttonContainer {
+  margin-top: 10px;
+}
+
+.orderButton {
+  width: 100%;
+  padding: 8px 0;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.orderButton:disabled {
+  background-color: #666;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+/* 구매 버튼 스타일 */
+.buy {
+  background-color: #b3575e; /* 활성화된 탭의 배경색과 비슷하게 설정 */
+  color: #ffffff;
+}
+
+.buy:hover:enabled {
+  filter: brightness(1.1); /* 호버 효과 */
+}
+
+/* 판매 버튼 스타일 */
+.sell {
+  background-color: #3977e2; /* 판매 버튼 색상 */
+  color: #ffffff;
+}
+
+.sell:hover:enabled {
+  filter: brightness(1.1); /* 호버 효과 */
+}

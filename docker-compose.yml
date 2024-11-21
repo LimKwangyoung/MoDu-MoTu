@@ -1,0 +1,80 @@
+version: "3"
+
+services:
+  redis:
+    image: redis:latest # Redis 컨테이너 이미지
+    container_name: redis # 컨테이너 이름 설정
+    ports:
+      - "6379:6379" # Redis 포트 노출
+    networks:
+      - app_network
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt:ro # SSL 인증서 마운트
+    depends_on:
+      - frontend
+      - django
+    networks:
+      - app_network
+
+  django:
+    build:
+      context: ./backend/django_back
+      dockerfile: Dockerfile
+
+    environment:
+      - DJANGO_SETTINGS_MODULE=back.settings # 필요한 경우 설정
+      # - DATABASE_HOST=mysql
+      - DATABASE_NAME=modumotu
+      - DATABASE_USER=back
+      - DATABASE_PASSWORD=coding
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    # depends_on:
+    #   - mysql
+    #   - redis
+    networks:
+      - app_network
+
+  frontend:
+    build:
+      context: ./ # 빌드 컨텍스트를 프로젝트 루트로 변경
+      dockerfile: frontend/Dockerfile
+    networks:
+      - app_network
+
+  frontend-test:
+    build:
+      context: ./ # 빌드 컨텍스트를 프로젝트 루트로 변경
+      dockerfile: frontend-test/Dockerfile
+    networks:
+      - app_network
+
+  # mysql:
+  #   image: mysql:latest
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: coding
+  #     MYSQL_DATABASE: modumotu
+  #     MYSQL_USER: back
+  #     MYSQL_PASSWORD: coding
+  #   ports:
+  #     - "3306:3306"
+  #   volumes:
+  #     - mysql_data:/var/lib/mysql
+  #   networks:
+  #     - app_network
+
+networks:
+  app_network:
+    driver: bridge
+
+volumes:
+  mysql_data:
+    external: true

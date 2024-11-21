@@ -1,0 +1,35 @@
+.buttonContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 150px;
+  border-radius: 2px;
+  gap: 5px;
+  margin: -3% 0 0 0px;
+  padding: 5px 0 4px 0;
+  /* background-color: black; */
+  /* background-color: #2e2e3a; */
+}
+
+.buttonContainer button {
+  background-color: #252525;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 30px;
+  padding: 3px 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.buttonContainer button:hover {
+  background-color: #3a3a4a;
+}
+
+.buttonContainer button.active {
+  background-color: #3a3a4a; /* 선택된 버튼의 배경색 */
+}
+
+.active {
+  background-color: #4a4a5a;
+}

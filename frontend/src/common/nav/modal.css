@@ -1,0 +1,46 @@
+/* modal.css */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  z-index: 999;
+  pointer-events: none; /* 모달 외부 클릭 가능 */
+}
+
+.modal {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 290px;
+  bottom: 30px;
+  background-color: #101013;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 1000;
+  padding: 0px;
+  pointer-events: auto; /* 모달 내부 상호작용 가능 */
+  /* border: 1px solid green; */
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  padding: 0;
+  /* border: 1px solid blue; */
+  height: 100%;
+}
+
+.modalCloseButton {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+}

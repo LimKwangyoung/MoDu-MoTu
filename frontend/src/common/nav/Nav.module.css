@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+/* Header */
+.header {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12개의 구역으로 나누기 */
+  gap: 10px;
+  max-width: 97vw;
+  max-width: 97vw;
+}
+
+.logo {
+  grid-column: span 3; /* 3칸 차지 */
+  color: #7b00f7;
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+  min-width: 150px;
+  cursor: pointer;
+  cursor: pointer;
+  /* border: 1px solid white; */
+}
+
+.modu {
+  color: #b469ff;
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+/* 검색 */
+.searchContainer {
+  grid-column: span 6; /* 6칸 차지 */
+  position: relative;
+  width: 100%; /* 부모 grid의 크기에 맞추기 */
+  min-width: 350px;
+  min-width: 350px;
+}
+
+/* 아이콘 */
+.icons {
+  grid-column: span 3; /* 3칸 차지 */
+  gap: 20px;
+  display: flex;
+  justify-content: flex-end; /* 오른쪽 정렬 */
+  height: 100%;
+  /* border: 1px solid white; */
+  padding-bottom: 7px;
+  width: 100%;
+  min-width: 200px;
+  cursor: pointer;
+  width: 100%;
+  min-width: 200px;
+  cursor: pointer;
+}
+
+.icon {
+  /* border: 1px solid white; */
+}
+
+.icon1 {
+  width: 40px;
+  height: 40px;
+}
+
+.icon2 {
+  width: 32px;
+  height: 32px;
+  margin: 7px 5px 0px 7px;
+}
+
+.icon3 {
+  width: 42px;
+  height: 40px;
+  margin-bottom: -3px;
+}

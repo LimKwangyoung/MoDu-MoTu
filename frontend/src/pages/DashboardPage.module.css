@@ -1,0 +1,127 @@
+.container {
+  height: 80vh;
+  width: 100vw;
+}
+
+.main {
+  position: relative;
+  user-select: none;
+}
+
+/* 화면 편집 버튼 */
+.addButton {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 45px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px; /* 둥글게 모서리 처리 */
+  padding: 5px 0px;
+  font-size: 14px;
+}
+
+.saveBtn {
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 12px;
+  background-color: #2b2b35;
+  cursor: pointer;
+}
+
+.addBtn {
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 12px;
+  background-color: #2b2b35;
+  cursor: pointer;
+}
+
+.saveBtn:hover, .addBtn:hover {
+  background-color: #212121;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 101;
+}
+
+.modalContent {
+  background-color: rgba(40, 40, 40, 0.95);
+  padding: 5px 20px 5px 20px;
+  border-radius: 8px;
+  width: 320px;
+  position: relative;
+}
+
+.modalTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.modalText {
+  color: black;
+}
+
+/* 위젯 리스트 토글 */
+.widgetList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0px auto;
+  padding: 10px 0px;
+  color: black;
+  font-size: 16px;
+  /* border: 1px solid red; */
+}
+
+.widgetItem {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  cursor: pointer;
+  color: grey;
+  transition: color 0.3s;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+/* 선택된 위젯 색상 */
+.widgetItemSelected {
+  color: #b469ff;
+}
+
+/* 선택되지 않은 위젯 색상 */
+.widgetItemUnselected {
+  color: rgb(107, 107, 107);
+}
+
+.widgetItem:hover {
+  background-color: #303030;
+  border-radius: 10px;
+}
+
+.checkIcon {
+  margin-right: 20px;
+}
+
+.widget {
+  overflow: hidden;
+  position: relative;
+  background-color: #252525;
+  border-radius: 5px;
+}

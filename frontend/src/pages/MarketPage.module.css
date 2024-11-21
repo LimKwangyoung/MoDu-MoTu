@@ -1,0 +1,102 @@
+/* MarketPage.module.css */
+/* why */
+
+
+/* 화면 중앙 배치를 위한 상위 래퍼 컨테이너 */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 88vw;
+  height: 590px;
+  margin: 10px 0 10px 80px;
+  padding: 60px 70px;
+  /* border: 1px solid blue; */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  /* border: 2px solid grey; */
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  width: 100%;
+  margin: 0 0 40px 10px;
+  /* border: 1px solid green; */
+}
+
+.tabs {
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid #3D3D47;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.tab {
+  cursor: pointer;
+  color: #3D3D47;
+  padding: 10px 15px;
+  border: none;
+  background: none;
+  font-weight: bolder;
+  position: relative;
+  font-size: 16px;
+  min-width: 78px;
+}
+
+.activeTab {
+  color: #e5e5e6;
+}
+
+.activeTab::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  height: 3px;
+  width: 100%;
+  background-color: #7B00F7;
+  border-radius: 1px;
+}
+
+.chartContainer {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  /* border: 1px solid blue; */
+}
+
+/* 
+.indexBox {
+  flex: 1;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 8px;
+  color: #e5e5e6;
+}
+
+.indexTitle {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.indexValue {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4d88ff;
+}
+
+.indexChange {
+  font-size: 16px;
+  color: #ff4d4f;
+} */

@@ -1,0 +1,167 @@
+.container {
+  margin: 10px 20px 20px 5px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.totalValue {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.totalChange {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.balance {
+  font-size: 13px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 기준 */
+.sorting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.filterButton {
+  background: #333;
+  color: #bbb;
+  border: none;
+  width: 88px;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow {
+  margin-left: 4px;
+}
+
+.dropdownContent {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  color: #bbb;
+  margin: 0;
+  padding: 8px 2px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.dropdownContent div {
+  width: 100%;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.dropdownContent div:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+.sortOptions {
+  display: flex;
+  border-radius: 4px;
+  /* gap: 8px; */
+}
+
+.sortButtonOne {
+  width: 56px;
+  background: #333;
+  color: #bbb;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 4px 0px 0px 4px;
+}
+
+.sortButtonTwo {
+  width: 56px;
+  background: #333;
+  color: #bbb;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 0px 4px 4px 0px;
+}
+
+.activeSortButton {
+  background-color: #555;
+  color: #fff;
+}
+
+/* 주식 리스트 */
+.holding {
+  margin-top: 16px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-top: 1px solid #333;
+  cursor: pointer;
+}
+
+.itemLeft {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.itemName {
+  color: #ccc;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.itemShares {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.itemRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.itemValue {
+  color: #ccc;
+  font-weight: bold;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.itemChange {
+  font-size: 14px;
+}
+
+.positive {
+  color: #cf5055;
+}
+
+.negative {
+  color: #4881ff;
+}

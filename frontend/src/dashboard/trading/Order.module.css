@@ -1,0 +1,44 @@
+.container {
+  height: 100%;
+  color: #fff;
+  /* border: 1px solid red; */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #2c2f36; /* 네비게이션 바 배경색 */
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.navItem {
+  flex: 1;
+  text-align: center;
+  padding: 5px 0;
+  font-weight: bold;
+  color: #aaa; /* 비활성화된 텍스트 색상 */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 8px;
+}
+
+.navItem:hover {
+  filter: brightness(1.2); /* 명도를 20% 밝게 */
+  font-weight: bold;
+}
+
+.activeBuy {
+  background-color: #4c2e33; /* 활성화된 '구매' 탭 배경색 */
+  color: #ff5a65; /* 활성화된 '구매' 탭 텍스트 색상 */
+}
+
+.activeSell {
+  background-color: #2a3c58; /* 활성화된 '판매' 탭 배경색 */
+  color: #3f84ff; /* 활성화된 '판매' 탭 텍스트 색상 */
+}
+
+.activeHold {
+  background-color: #27453e; /* 활성화된 '대기' 탭 배경색 */
+  color: #26d4a5; /* 활성화된 '대기' 탭 텍스트 색상 */
+}

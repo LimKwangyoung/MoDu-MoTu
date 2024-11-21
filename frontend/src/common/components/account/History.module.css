@@ -1,0 +1,331 @@
+.container {
+  margin: 0px 20px 20px 5px;
+  height: 100%;
+  width: 97%;
+  color: #fff;
+}
+
+/* .tabs {
+  display: flex;
+  font-size: 18px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #3d3d47;
+}
+
+.tabOne {
+  cursor: pointer;
+  color: #3d3d47;
+  width: 50px;
+  background: none;
+  color: #bbb;
+  border: none;
+  padding: 8px 8px 12px 8px;
+  cursor: pointer;
+  font-weight: bolder;
+  position: relative;
+}
+
+.tabTwo {
+  cursor: pointer;
+  color: #3d3d47;
+  width: 80px;
+  background: none;
+  color: #bbb;
+  border: none;
+  padding: 8px 8px 12px 8px;
+  cursor: pointer;
+  font-weight: bolder;
+  position: relative;
+}
+
+.activeTabButton {
+  color: #e5e5e6;
+}
+
+.activeTabButton::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  height: 2px;
+  width: 100%;
+  background-color: #e5e5e6;
+  border-radius: 1px;
+} */
+
+/* 날짜 선택 */
+.dateDropdown {
+  position: relative;
+}
+
+.filterButton {
+  background: #333;
+  color: #bbb;
+  border: none;
+  width: 110px;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow {
+  margin-left: 4px;
+}
+
+.dropdownContent {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  color: #bbb;
+  padding: 8px 3px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  font-size: 0.8rem;
+  height: 180px;
+  overflow-y: scroll;
+}
+
+.dropdownContent::-webkit-scrollbar {
+  width: 2px;
+}
+
+.dropdownContent::-webkit-scrollbar-thumb {
+  background-color: #888; /* 회색 스크롤바 */
+  border-radius: 50px; /* 둥근 모서리 */
+}
+
+.dropdownContent::-webkit-scrollbar-track {
+  background: transparent; /* 스크롤 트랙 배경을 투명하게 설정 */
+}
+
+.dropdownContent div {
+  width: 100%;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.dropdownContent div:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+/* 일반 주문 vs 조건 주문 */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #2c2f36; /* 네비게이션 바 배경색 */
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.navItem {
+  flex: 1;
+  text-align: center;
+  padding: 5px 0;
+  font-weight: bold;
+  color: #aaa; /* 비활성화된 텍스트 색상 */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 8px;
+}
+
+.navItem:hover {
+  filter: brightness(1.2);
+  font-weight: bold;
+}
+
+.active {
+  background-color: #4c4d55; /* 활성화된 탭의 배경색 */
+  color: #ffffff; /* 활성화된 탭의 텍스트 색상 */
+  border: none;
+}
+
+.unactive {
+  background-color: #2c2f36;
+  border: none;
+  color: #ccc;
+}
+
+/* filter 미체결 주문 */
+.filter {
+  display: flex;
+  justify-content: end;
+  margin-top: 10px;
+}
+
+.pendingButton, .backButton {
+  /* border: 1px solid blue; */
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color:#333;
+  font-size: 11px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+/*  */
+.section {
+  margin-top: 20px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 5px;
+  margin-bottom: 10px;
+  border-top: 1px solid #333;
+}
+
+.orderModal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: -10px;
+  padding: 16px 10px 16px 5px;
+  margin-bottom: 10px;
+  border-top: 1px solid #333;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: #bbb;
+  width: 60px;
+  margin-left: 10px;
+}
+
+.dateModal {
+  font-size: 0.8rem;
+  color: #bbb;
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.orderInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 4px;
+  min-width: 130px;
+}
+
+.orderInfoModal {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 110px;
+  min-width: 110px;
+  max-width: 110px;
+  /* border: 1px solid blue; */
+}
+
+.name {
+  font-weight: bold;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 115px;
+  color: #ccc;
+}
+
+.cancelBtn {
+  color: #aaa;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.cancelBtn:hover {
+  color:#eee;
+  font-weight: 600;
+}
+
+/* 상태별 스타일 */
+.status {
+  font-size: 13px;
+}
+
+.statusModal {
+  font-size: 12px;
+}
+
+.status-cancelled {
+  color: #888888; /* 취소 */
+}
+
+.status-pending {
+  color: #26d4a5; /* 초록색 */
+}
+
+.status-buy {
+  color: #cf5055; /* 구매 완료 */
+}
+
+.status-sell {
+  color: #4881ff; /* 판매 완료 */
+}
+
+.shares {
+  color: #888;
+  font-size: 13px;
+}
+
+.sharesModal {
+  color: #888;
+  font-size: 12px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 15px;
+  width: 130px;
+  text-align: right;
+  color: #ccc;
+  /* border: 1px solid red; */
+}
+
+.priceModal {
+  font-weight: bold;
+  font-size: 12px;
+  text-align: right;
+  color: #ccc;
+  width: 100px;
+  /* border: 1px solid red; */
+}
+
+.priceTerm {
+  font-size: 11px;
+  color: #888;
+}
+
+.priceTermModal {
+  font-size: 9px;
+  color: #888;
+}
+
+
+.emptyMessage {
+  color: #bbb;
+  font-size: 12px;
+  text-align: center;
+  margin: 30px 0 60px 0;
+}
